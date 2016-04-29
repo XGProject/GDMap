@@ -1,0 +1,27 @@
+//
+//  PrefixHeader.pch
+//  gaodeMap
+//
+//  Created by 厦航 on 16/4/28.
+//  Copyright © 2016年 厦航. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+/*iOS9可以展示的AlertView*/
+#define SHOWCONTROLLER(_message_)   UIAlertController * alertController= [UIAlertController alertControllerWithTitle:@"提示" message:_message_ preferredStyle:UIAlertControllerStyleAlert];\
+UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];\
+[alertController addAction:action];\
+[self presentViewController:alertController animated:true completion:nil];\
+
+#define WIDTH self.view.frame.size.width
+#define HEIGHT self.view.frame.size.height
+
+#endif /* PrefixHeader_pch */
